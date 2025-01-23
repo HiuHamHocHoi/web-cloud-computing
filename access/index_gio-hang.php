@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+echo getcwd();
 // Kiểm tra xem người dùng đã đăng nhập chưa
 // if (!isset($_SESSION['id'])) {
 //     // Nếu chưa đăng nhập, chuyển hướng người dùng đến trang đăng nhập
@@ -69,7 +69,7 @@ require_once('header.php');
             <input type="text" name="deliveryAddress">
             <label for="delivery-address">Số điện thoại</label>
             <input type="text" name="phone">
-            <form action="../HandlePay/pay.php" method="post" id="orderForm">
+            <form action="/HandlePay/pay.php" method="post" id="orderForm">
                 <div class="total">
                     <p>Tổng cộng:</p>
                     <p id="price">0đ</p>
