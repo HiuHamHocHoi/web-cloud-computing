@@ -148,7 +148,7 @@ require_once('../admin/config.php');
                         <td style='color:" . ($paymentStatus == 'Đã thanh toán' ? 'green' : 'red') . "'>
                             {$paymentStatus}";
                     if ($TypePay == 'Thanh toán qua ngân hàng' && $paymentStatus == 'Chưa thanh toán') {
-                        echo "<form action='/HandlePay/pay.php' method='post' style='margin-top: 10px;'>
+                        echo "<form action='pay_again.php' method='post' style='margin-top: 10px;'>
                                 <input type='hidden' name='order_id' value='{$row['order_code']}'>
                                 <input type='hidden' name='total_price' value='{$row['price']}'>
                                 <button type='submit' name = 'payUrl' class='pay-again'>Thanh toán</button>
